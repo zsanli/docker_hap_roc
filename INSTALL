@@ -1,0 +1,9 @@
+docker run  --rm   -v  /mnt/gen_bioinfinternal:/mnt/gen_bioinfinternal -v  /mnt/gen_bioinfassets:/mnt/gen_bioinfassets -v  /mnt/gen_bioinfdata:/mnt/gen_bioinfdata -e "HG19=/mnt/gen_bioinfassets/Reference_sequences/Homo_sapiens/GATK_hg19_google/v0/Homo_sapiens_assembly19.fasta" -it hap_roc_docker:v0.1 /home/velona/hap.py/src/R/rocplot.Rscript
+
+##################!!!!!! manually add LowGQ in filter header
+docker run  --rm   -v  /mnt/gen_bioinfinternal:/mnt/gen_bioinfinternal -v  /mnt/gen_bioinfassets:/mnt/gen_bioinfassets -v  /mnt/gen_bioinfdata:/mnt/gen_bioinfdata -e "HG19=/mnt/gen_bioinfassets/Reference_sequences/Homo_sapiens/GATK_hg19_google/v0/Homo_sapiens_assembly19.fasta" -it hap_roc_docker:v0.1 /home/velona/hap.py/src/R/rocplot.Rscript \
+/mnt/gen_bioinfdata/zhi/test_trio/27_9_2020_GIAB/hap_comparison/HG002_GRCh37_1_22_v4.1_draft_benchmark.with_wex_Agilent_SureSelect_bed.vcf   \
+/mnt/gen_bioinfdata/zhi/test_dragen/GIAB_dragen_output5_callable/hap_comparison_DRAGEN/only_GIAB.trioCGP_gnomad_SnpSift_SPiP.ann.proband.ranked.SPiP.callable.vcf \
+-r /mnt/gen_bioinfassets/Reference_sequences/Homo_sapiens/GATK_hg19_google/v0/Homo_sapiens_assembly19_essential.fasta \ 
+-o /mnt/gen_bioinfdata/zhi/test_dragen/GIAB_dragen_output5_callable/hap_comparison_DRAGEN/hap_DRAGEN_result/DRAGEN_callable
+

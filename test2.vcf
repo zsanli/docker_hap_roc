@@ -1,0 +1,10 @@
+##fileformat=VCFv4.2
+##DRAGENCommandLine=<ID=HashTableBuild,Version="SW: 01.003.044.3.7.5, HashTableVersion: 8",CommandLineOptions="dragen --build-hash-table true --ht-reference /staging/human/reference/hg19/hg19.fa --output-dir /staging/human/reference/hg19/hg19.fa.k_21.f_16.m_149 --ht-alt-liftover /opt/edico/liftover/hg19_alt_liftover.sam --ht-num-threads 48 --enable-cnv true">
+##FILTER=<ID=DRAGENIndelHardQUAL,Description="Set if true:QUAL < 7.83">
+##FILTER=<ID=DRAGENSnpHardQUAL,Description="Set if true:QUAL < 10.41">
+##FILTER=<ID=LowDepth,Description="Set if true:DP <= 1">"
+"##FILTER=<ID=LowGQ,Description="Set if true:GQ <= 1">
+##FILTER=<ID=PASS,Description="All filters passed">
+##FILTER=<ID=PloidyConflict,Description="Genotype call from variant caller not consistent with chromosome ploidy">
+##FILTER=<ID=RMxNRepeatRegion,Description="Site filtered because all or part of the variant allele is a repeat of the reference">
+##FILTER=<ID=SnpSift,Description="SnpSift 5.0 (build 2020-08-09 21:24), by Pablo Cingolani, Expression used: isHom( GEN[2] ) & isRef( GEN[2] )">
