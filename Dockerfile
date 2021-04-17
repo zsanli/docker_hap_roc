@@ -10,5 +10,5 @@ ENV HTTPS_PROXY "http://proxy.etat.lu:80"
 ENV http_proxy "http://proxy.etat.lu:80"
 ENV https_proxy "http://proxy.etat.lu:80"
 ENV NO_PROXY "127.0.0.1,localhost,*.lns.lu"
-COPY ./hap.py /home/velona
+COPY . /home/velona
 CMD ["bash"] 

@@ -1,4 +1,4 @@
-docker run  --rm   -v  /mnt/gen_bioinfinternal:/mnt/gen_bioinfinternal -v  /mnt/gen_bioinfassets:/mnt/gen_bioinfassets -v  /mnt/gen_bioinfdata:/mnt/gen_bioinfdata -e "HG19=/mnt/gen_bioinfassets/Reference_sequences/Homo_sapiens/GATK_hg19_google/v0/Homo_sapiens_assembly19.fasta" -it hap_roc_docker:v0.1 /home/velona/hap.py/src/R/rocplot.Rscript
+docker run  --rm   -v  /mnt/gen_bioinfinternal:/mnt/gen_bioinfinternal -v  /mnt/gen_bioinfassets:/mnt/gen_bioinfassets -v  /mnt/gen_bioinfdata:/mnt/gen_bioinfdata -e "HG19=/mnt/gen_bioinfassets/Reference_sequences/Homo_sapiens/GATK_hg19_google/v0/Homo_sapiens_assembly19.fasta" -it hap_roc_docker:v0.1 /opt/miniconda/envs/gatk/bin/Rscript /home/velona/hap.py/src/R/rocplot.Rscript
 
 ##################!!!!!! manually add LowGQ in filter header
 docker run  --rm   -v  /mnt/gen_bioinfinternal:/mnt/gen_bioinfinternal -v  /mnt/gen_bioinfassets:/mnt/gen_bioinfassets -v  /mnt/gen_bioinfdata:/mnt/gen_bioinfdata -e "HG19=/mnt/gen_bioinfassets/Reference_sequences/Homo_sapiens/GATK_hg19_google/v0/Homo_sapiens_assembly19.fasta" -it hap_roc_docker:v0.1 /home/velona/hap.py/src/R/rocplot.Rscript \
