@@ -1,7 +1,8 @@
 FROM germline_exome_trio_pipeline_combine_hap_base:v0.1
 LABEL maintainer="zhi.zhang@lns.etat.lu"
 USER root
-RUN conda install -c conda-forge -y r-gg.gap
+#RUN conda install -c conda-forge -y r-gg.gap
+RUN /opt/miniconda/envs/gatk/bin/R --vanilla -e 'install.packages("gg.gap",repos="https://cran.r-project.org/")'
 USER   velona
 WORKDIR /home/velona
 VOLUME /mnt/gen_bioinfassets
